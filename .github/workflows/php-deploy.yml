@@ -1,0 +1,20 @@
+name: PHP FTP Deploy (Demo)
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  deploy-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Lay code moi nhat
+        uses: actions/checkout@v3
+
+      - name: 2. Kiem tra file ton tai
+        run: ls -la
+
+      - name: 3. Mo phong Upload FTP (Simulation)
+        run: |
+          echo "Dang ket noi toi FTP Server..."
+          echo "Dang upload file index.php..."
+          echo "Dang upload database config..."
+          echo "UPLOAD THANH CONG! (Demo Mode)"
